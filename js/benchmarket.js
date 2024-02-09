@@ -43,6 +43,7 @@ startDiff.addEventListener("click", function () {
               btn.style.background = "green";
               punteggioCorrette++;
             } else {
+              btn.style.background = "red";
               punteggioSbagliate++;
             }
             indiceD++;
@@ -66,7 +67,7 @@ startDiff.addEventListener("click", function () {
 
     //funzione timer//////////////////////////////////////////////////////////////////////////////
     let timerRef;
-    let countdown = 60;
+    let countdown = 30;
     let step = 100 / countdown; //passo da fare il colore
     let n1 = 0;
 
@@ -95,7 +96,7 @@ startDiff.addEventListener("click", function () {
     }
 
     function restartTimer() {
-      countdown = 60;
+      countdown = 25;
       n1 = 0;
       clearInterval(timerRef);
       startTimer();
@@ -112,7 +113,7 @@ startDiff.addEventListener("click", function () {
         datasets: [
           {
             borderWidth: 0,
-            label: "My First Dataset",
+            label: "le tue risposte",
             data: [punteggioSbagliate, punteggioCorrette],
             backgroundColor: ["#C2128D", "#00FFFF"],
             hoverOffset: 10,
