@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--   //Link copiati da result.html// -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+    <link rel="stylesheet" href="../css/benchmark.css" />
+
+    <title>Benchhmark Page</title>
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="../assets/epicode_logo.png" alt="logo" />
+    </header>
+    <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <div class="difficolta">
+      <h1 class="titoloSetup">Set-up your exam</h1>
+      <p class="par">Choose the difficulty level for your EPICODE test</p>
+
+      <div class="radio-difficult">
+        <input type="radio" id="difEasy" name="level" value="easy" />
+        <label class="easy" for="difEasy">easy</label>
+        <input type="radio" id="difMedium" name="level" value="medium" />
+        <label class="medium" for="difMedium">medium</label>
+        <input type="radio" id="difHard" name="level" value="difficult" />
+        <label class="difficult" for="difHard">hard</label>
+      </div>
+
+      <p class="par">Number of questions</p>
+
+      <div class="radio-number">
+        <input type="radio" id="radioD" name="num" value="10" />
+        <label class="ten" for="radioD">10</label>
+        <input type="radio" id="radioV" name="num" value="20" />
+        <label class="twenty" for="radioV">20</label>
+        <input type="radio" id="radioT" name="num" value="30" />
+        <label class="thirty" for="radioT">30</label>
+      </div>
+
+      <div class="container-btn">
+        <button id="btn">START</button>
+      </div>
+    </div>
+
+    <!-- ****************************************************************************** -->
+    <div class="benchmark">
+      <div>
+        <div class="countdown">
+          <div class="timer">
+            <p>SECONDS</p>
+            <p id="number-coundown"></p>
+            <p>REMAINING</p>
+          </div>
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <main>
+        <div>
+          <h1 class="domanda"></h1>
+        </div>
+        <div class="btn-container"></div>
+      </main>
+      <footer class="benchmarkFooter">
+        <p>QUESTION</p>
+        <p class="attuale">1</p>
+        <p class="off">/ 10</p>
+      </footer>
+    </div>
+    <!-- ---------------------------------------------------------------------marco -->
+    <div class="result">
+      <main>
+        <div class="title">
+          <h1>Results</h1>
+          <p>The summary of your answer:</p>
+        </div>
+        <section class="card">
+          <div class="box1" id="box1">
+            <h2>Correct</h2>
+            <h1 id="risultatoPositivo">60</h1>
+            <p class="pCorrect"></p>
+          </div>
+          <div class="box2">
+            <canvas id="grafico" width="600px" height="600px"> </canvas>
+            <p id="scuse"></p>
+
+            <span id="esito"> </span>
+            <article id="article"></article>
+          </div>
+          <div class="box1" id="box1">
+            <h2>Wrong</h2>
+            <h1 id="risultatoNegativo">40</h1>
+            <p class="pIncorrect"></p>
+          </div>
+        </section>
+        <div class="buttone">
+          <button type="submit"><a href="./feedback.html">RATE US</a></button>
+        </div>
+      </main>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    </div>
+    <!--  -->
+    <script src="../js/benchmarket.js"></script>
+  </body>
+</html>
