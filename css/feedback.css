@@ -86,6 +86,7 @@ button:hover {
   gap: 0rem;
 }
 #star {
+  padding-right: 10px;
   color: hsl(233 60% 18% / 1);
   cursor: pointer;
 }
@@ -98,6 +99,16 @@ button:hover {
 #star.acceso {
   color: #00ffff;
 }
+#star.male {
+  color: #980000b6;
+}
+#star.buono {
+  color: #e5ff00;
+}
+#star.ottimo {
+  color: #00ff40a3;
+}
+
 #svgContainer {
   width: 30px;
   height: 30px;

@@ -19,6 +19,7 @@ divStars.forEach((el, index) => {
   el.onclick = function () {
     starValore = index + 1;
     console.log(starValore);
+
     divStars.forEach((child) => {
       child.classList.remove("acceso");
 
@@ -26,8 +27,7 @@ divStars.forEach((el, index) => {
       if (starValore <= 4) {
         // console.log("pessimo");
         img.src = "../assets/faces/sad-svgrepo-com.svg";
-
-        divEmo.appendChild(img);
+        // child.classList.add("buono");
       } else if (starValore > 4 && starValore < 8) {
         // console.log("buono");
         img.src = "../assets/faces/straight-svgrepo-com.svg";
@@ -85,5 +85,3 @@ invia.addEventListener("click", function () {
   parteSottostante.style.color = "white";
   parteSottostante.style.marginTop = "200px";
 });
-
-
